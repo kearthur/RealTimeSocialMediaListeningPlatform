@@ -110,13 +110,18 @@ er", Records=tweets)
 
 ```
 
-5. On AWS, create an Elastic Search domain, a Kinesis stream (called "Twitter_data" in our code), and a Firehose connected to your Kinesis stream. 
+5. On AWS, create an Elasticsearch domain, a Kinesis stream (called "Twitter_data" in our code), and a Firehose connected to your that picks up data from your Kinesis Stream and directs data to your Elasticsearch domain. 
+
+When you create your Elasticsearch domain, you will need to name the index that it infers. Name this index "twitter."
 
 6. Use Git Bash to run stream.py, which will start feeding streaming Twitter data into your Kinesis stream.
 
 ```
 python stream.py
 ```
+After running this script, your Kinesis Stream should now be collecting tweets to pass to Firehose and on to your Elasticsearch domain. You can click the "Monitoring" tab on either your Stream or Firehose to see visualizations of the amount of data coming in to your Kinesis pipelines. 
+
+7. Check the "Index" tab of your Elasticsearch domain. There is a default index called ".kibana." Once you see your index named "twitter" appear, this means that your domain has started to recive an index data. 
 
 ```
 PUT ins
