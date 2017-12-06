@@ -3,7 +3,7 @@ This project uses Twitter public streams to analyze tweets for specific keywords
 
 The dashboard contains -- --
 
-##Getting Started
+## Getting Started
 
 1. Create an AWS account.
 
