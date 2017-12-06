@@ -117,3 +117,54 @@ er", Records=tweets)
 ```
 python stream.py
 ```
+PUT ins
+{
+"settings": {
+    "index.mapping.ignore_malformed": true 
+  },
+  "mappings": {
+    "doc": { 
+      "properties": 
+				  {"timestamp_ms": {
+                                  "type": "date"
+                                  },
+                     "text": {
+                                  "type": "string"
+                              },
+                     "coordinates": {
+                          "properties": {
+                             "coordinates": {
+                                "type": "geo_point"
+                             },
+                             "type": {
+                               "type": "string",
+                                "index" : "not_analyzed"
+                            }
+                          }
+                     },
+                     "user": {
+                          "properties": {
+                             "id": {
+                                "type": "long"
+                             },
+                             "name": {
+                                "type": "string"
+                            }
+                          }
+                     }
+                    }
+				}
+        }
+      }
+
+
+POST _reindex
+{
+  "source": {
+    "index": "twitter"
+  },
+  "dest": {
+    "index": "my_index"
+  }
+}	
+```
