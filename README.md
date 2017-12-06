@@ -117,6 +117,8 @@ er", Records=tweets)
 ```
 python stream.py
 ```
+
+```
 PUT ins
 {
 "settings": {
