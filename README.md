@@ -123,8 +123,18 @@ After running this script, your Kinesis Stream should now be collecting tweets t
 
 7. Check the "Index" tab of your Elasticsearch domain. There is a default index called ".kibana." Once you see your index named "twitter" appear, this means that your domain has started to recive an index data. 
 
+8. Now that data is being indexed under the schema named "twitter" that Elasticsearch is inferring, you can click the link to Kibana in your Elasticsearch service console. This will take you to the Kibana application that is running on top of the current Elasticsearch domain. 
+
+9. Unfortunately, the schema that Elasticsearch is inferring automatically will not assign the correct types to our coordinate and time stamp fields. We need to change the types of these fields in order to use them to make meaningful visualizations. In order to do this, we will use the Developer Tools shell in Kibana. To access this shell, click on "Developer Tools" in the left toolbar.
+
+In the console, enter and run the following two chunks of code. 
+
+The first chunk creates a new index called "my_index," which correctly indexes the time stamp as a date and the coordinates as a geo_pint type. 
+
+The second chunk takes all of the Twitter data that was indexed under your "twitter" index and copies it to the new "my_index" index. We have to copy this data over because no changes can be made to an existing index. 
+
 ```
-PUT ins
+PUT my_index
 {
 "settings": {
     "index.mapping.ignore_malformed": true 
