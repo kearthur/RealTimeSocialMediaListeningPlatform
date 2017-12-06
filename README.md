@@ -1,4 +1,4 @@
-# StreamingTwitterMap
+# Real-time Social Listening Platform
 This project uses Twitter public streams to analyze tweets for specific keywords and hashtags. We will show you how to deploy the Amazon Web Services managed services tools Kinesis Stream, Kinesis Firehose, Amazon Elastic Search, and Kibana, to create a discovery platform for near-real-time Twitter data.  
 
 The dashboard contains -- --
