@@ -125,7 +125,7 @@ After running this script, your Kinesis Stream should now be collecting tweets t
 
 8. Now that data is being indexed under the schema named "twitter" that Elasticsearch is inferring, you can click the link to Kibana in your Elasticsearch service console. This will take you to the Kibana application that is running on top of the current Elasticsearch domain. 
 
-9. Unfortunately, the schema that Elasticsearch is inferring automatically will not assign the correct types to our coordinate and time stamp fields. We need to change the types of these fields in order to use them to make meaningful visualizations. In order to do this, we will use the Developer Tools shell in Kibana. To access this shell, click on "Developer Tools" in the left toolbar.
+9. Unfortunately, the schema that Elasticsearch is inferring automatically will not assign the correct types to our coordinate and time stamp fields. We need to change the types of these fields in order to use them to make meaningful visualizations. In order to do this, we will use the Dev Tools shell in Kibana. To access this shell, click on "Dev Tools" in the left toolbar.
 
 In the console, enter and run the following two chunks of code. 
 
@@ -185,3 +185,7 @@ POST _reindex
   }
 }	
 ```
+10. Now we will use the "Management" tool in the toolbar to configure this new index pattern. Enter "my_index" in the field for the name of the index, don't change the dault on the time-field name, and click "Create."
+
+11. Go to "Discover" by clicking the button in the left toolbar. Below the query bar on the top of the bar that lists the fields in your data, you should see a dropdown menu with the index name "twitter." Click this to select your new index name from the drop down. The icons next to the time_stamp and coordinates fields in the bar listing the fields in your data should now change to icons for the correct type.
+
