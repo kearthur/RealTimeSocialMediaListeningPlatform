@@ -1,5 +1,3 @@
-import json
-
 from TwitterAPI import TwitterAPI
 import json
 import boto3
