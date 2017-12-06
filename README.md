@@ -34,7 +34,10 @@ $ sudo pip install --upgrade requests
 
 ```
 vi stream.py
+```
+The code in stream.py is the following:
 
+```
 import json
 import credentials
 from TwitterAPI import TwitterAPI
