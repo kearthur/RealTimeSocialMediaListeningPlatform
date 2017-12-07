@@ -53,13 +53,13 @@ import re
 from bs4 import BeautifulSoup
 
 ## twitter credentials
-consumer_key = credentials.consumer_key
-consumer_secret = credentials.consumer_secret
-access_token_key = credentials.access_token_key
-access_token_secret = credentials.access_token_secret
-aws_access_key_id=credentials.aws_access_key_id
-aws_secret_access_key=credentials.aws_secret_access_key
-stream = credentials.stream
+consumer_key = your consumerkey
+consumer_secret = your consumer_secret
+access_token_key = your access_token_key
+access_token_secret = your access_token_secret
+aws_access_key_id= your aws_access_key_id
+aws_secret_access_key=c your aws_secret_access_key
+stream = your Kinesis stream name
 
 
 
