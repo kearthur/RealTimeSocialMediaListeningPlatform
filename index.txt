@@ -36,6 +36,7 @@ PUT my_index
                     }
 				}
         }
+      }
 
 
 POST _reindex
