@@ -191,6 +191,7 @@ POST _reindex
   }
 }	
 ```
+
 10. Now we will use the "Management" tool in the toolbar to configure this new index pattern. Enter "my_index" in the field for the name of the index, don't change the dault on the time-field name, and click "Create."
 
 11. Go to "Discover" by clicking the button in the left toolbar. Below the query bar on the top of the bar that lists the fields in your data, you should see a dropdown menu with the index name "twitter." Click this to select your new index name from the drop down. The icons next to the time_stamp and coordinates fields in the bar listing the fields in your data should now change to icons for the correct type.
