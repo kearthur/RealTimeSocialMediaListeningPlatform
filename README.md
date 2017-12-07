@@ -1,7 +1,13 @@
 # Real-time Social Listening Platform
-This project uses Twitter public streams to analyze tweets for specific keywords and hashtags. We will show you how to deploy the Amazon Web Services managed services tools Kinesis Stream, Kinesis Firehose, Amazon Elastic Search, and Kibana, to create a discovery platform for near-real-time Twitter data.  
 
-The dashboard contains -- --
+The aim of the project is to explore Amazon Web Services Kinesis, Elasticsearch and Kibana to capture and analyse social media metrics. 
+Gartner has consistently ranked AWS as the leader for its cloud infrastructure for storage and high speed processing of big data. We wanted to explore some of AWS offerings to understand the tools it offers for companies to stream big data from a source and capture, process, analyse and present it. 
+
+One of the challenges of working with big data is understanding how to leverage its velocity for real-time decision-making. Our project demonstrated how a company could use the AWS infrastructure with streaming Twitter data to perform better social listening across social media platforms. This empowers brands to go beyond basic metrics on how users engage with the content they produce, to listen to the organically evolving conversation about their brand across a social media platform. Social listening is especially important for event-based conversations, such as monitoring new product launches or responding to customer service crises. It also allows companies to more fully take advantage of social media as a platform for having real-time conversations with customers, rather than a traditional channel for distributing content. 
+
+The same infrastructure can be replicated to stream data from any company source to stream web log data/transaction data/customer feedbacks for better, quicker decision making. For example, Target currently uses Kibana for real-time monitoring of sales transactions on Black Friday, the single day of shopping that accounts for a quarter of their total annual sales. The tool’s capacity for managing streaming data allows Target analysts and sales managers to make immediate decisions on price cuts and promotions throughout the day.
+
+Our final results on Kibana were a dashboard featuring metrics on the tweet, mention count, unique hashtags, and unique channels; a coordinate map with circles corresponding to number of tweets; a time series graph of incoming tweets; bar chart of source of tweets; and a word cloud of top hashtags.
 
 ## Getting Started
 
